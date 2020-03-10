@@ -1,0 +1,357 @@
+2020-02-18 21:09:44,183 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2020-02-18 21:09:44,254 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\napalm\base\__init__.py", line 74, in get_network_driver
+    raise ModuleImportError("Please provide a valid driver name.")
+napalm.base.exceptions.ModuleImportError: Please provide a valid driver name.
+
+2020-02-18 21:47:11,741 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 1 hosts
+2020-02-18 21:47:11,806 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    if kwargs["device_type"] not in platforms:
+KeyError: 'device_type'
+
+2020-02-18 21:49:33,066 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 1 hosts
+2020-02-18 21:49:33,133 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    if kwargs["device_type"] not in platforms:
+KeyError: 'device_type'
+
+2020-02-18 21:49:37,620 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 1 hosts
+2020-02-18 21:49:37,660 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    if kwargs["device_type"] not in platforms:
+KeyError: 'device_type'
+
+2020-02-18 21:52:02,777 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 1 hosts
+2020-02-18 21:52:02,821 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    if kwargs["device_type"] not in platforms:
+KeyError: 'device_type'
+
+2020-02-18 21:52:56,722 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 1 hosts
+2020-02-18 21:52:56,785 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    if kwargs["device_type"] not in platforms:
+KeyError: 'device_type'
+
+2020-02-18 21:54:56,344 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 1 hosts
+2020-02-18 21:54:56,393 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 246, in ConnectHandler
+    if kwargs["device_type"] not in platforms:
+KeyError: 'device_type'
+
+2020-02-18 22:05:13,851 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 1 hosts
+2020-02-18 22:05:13,906 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 318, in __init__
+    self._open()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 898, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Connection to device timed-out: cisco_ios 192.168.0.8":22
+
+2020-02-18 22:05:29,106 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 1 hosts
+2020-02-18 22:05:29,114 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 318, in __init__
+    self._open()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 898, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Connection to device timed-out: cisco_ios 192.168.0.8":22
+
+2020-02-18 22:06:13,559 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 1 hosts
+2020-02-18 22:06:13,567 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 318, in __init__
+    self._open()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 898, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Connection to device timed-out: cisco_ios 192.168.0.8":22
+
+2020-02-18 22:06:53,270 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 1 hosts
+2020-02-18 22:06:53,278 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 318, in __init__
+    self._open()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 898, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Connection to device timed-out: cisco_ios 192.168.0.8":22
+
+2020-02-18 22:10:45,296 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2020-02-18 22:10:45,404 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\napalm\base\base.py", line 96, in _netmiko_open
+    **netmiko_optional_args
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 318, in __init__
+    self._open()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 898, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Connection to device timed-out: cisco_ios 192.168.0.8":22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\napalm.py", line 51, in open
+    connection.open()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\napalm\ios\ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\napalm\base\base.py", line 99, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 192.168.0.8"
+
+2020-02-18 22:10:57,672 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2020-02-18 22:10:57,688 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 892, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\napalm\base\base.py", line 96, in _netmiko_open
+    **netmiko_optional_args
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 252, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 318, in __init__
+    self._open()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 323, in _open
+    self.establish_connection()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 898, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Connection to device timed-out: cisco_ios 192.168.0.8":22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\napalm.py", line 51, in open
+    connection.open()
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\napalm\ios\ios.py", line 169, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "C:\Users\Jitsuaki\AppData\Local\Programs\Python\Python37\lib\site-packages\napalm\base\base.py", line 99, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 192.168.0.8"
+
