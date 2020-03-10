@@ -30,9 +30,9 @@ result = nr.run(task=netmiko_send_command, command_string="show interfaces")
 r1 = nr.filter(F(hostname__contains='192.168.99.10'))
 
 
-
-
+##########
 HOST FILE
+##########
 
 
 ---
