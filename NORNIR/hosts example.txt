@@ -1,0 +1,23 @@
+Workink host file example
+
+
+
+---
+R1LAB:
+   hostname: 10.122.64.251
+   username: cisco
+   password: cisco
+   port: 22
+   connection_options:
+       netmiko:
+          port: 22
+          platform: ios
+       napmal:
+          port: 22
+          platform: ios
+          driver: ios
+   groups:
+       - routers
+   data:
+      site: LAB
+      type: network_device

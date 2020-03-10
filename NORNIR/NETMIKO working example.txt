@@ -1,0 +1,50 @@
+
+
+from nornir import InitNornir
+from nornir.plugins.tasks.networking import napalm_get
+from nornir.plugins.tasks.networking import netmiko_send_command
+from nornir.plugins.functions.text import print_result
+
+nr = InitNornir(config_file='config.yaml')
+
+result = nr.run(
+             napalm_get,
+             getters=['get_facts'])
+
+'''
+result = nr.run(
+    task=netmiko_send_command,
+    command_string="show interfaces"
+)
+'''
+print_result(result)
+
+
+
+
+---
+core:
+  num_workers: 100
+inventory:
+  plugin: nornir.plugins.inventory.simple.SimpleInventory
+  options:
+      host_file: "hosts.yaml"
+      group_file: "group.yaml"
+
+
+---
+routers:
+    nornir_username: cisco
+    nornir_password: cisco
+    nornir_ssh_port: 22
+    platform: "ios"
+
+
+---
+R2:
+  hostname: 192.168.0.8
+  groups:
+    - routers
+  data:
+        type: network_device
+ 
