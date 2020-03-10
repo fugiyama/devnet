@@ -1,0 +1,90 @@
+NETCONF Test
+
+from ncclient import manager
+
+#CRIA O EQUIPAMENTO A SER CONECTADO COM SEUS PARAMETROS
+iosxeao = {
+'address': '10.122.64.251',
+'netconf_port': 10000,
+'restconf_port': 443,
+'username': 'cisco',
+'password': 'cisco'}
+
+#CRIA A CONEXAO NETCONF
+iosxe_manager = manager.connect(
+    host = iosxeao["address"],
+    port = iosxeao["netconf_port"],
+    username = iosxeao["username"],
+    password = iosxeao["password"],
+    hostkey_verify = False)
+
+# VERIFICA SE ESTA CONECTADO, CASO ESTEJA RETORNA TRUE
+iosxe_manager.connected
+
+#CRIA A VARIAVEL PARA VERIFICAR OS MODULOS
+iosxe_manager.server_capabilities
+
+#VERIFICA OS MODULOS SUPORTADOS
+for capability in iosxe_manager.server_capabilities:
+    print(capability)
+
+
+#CRIAR FILTRO PARA FILTRAR AS PARTES QUE DESEJA VER
+
+filter_GigabitEthernet3 = """
+<filter>
+    <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+        <interface>
+            <name> GigabitEthernet3 </name>
+        </interface>
+    </interfaces>
+</filter>
+"""
+
+#FILTRANDO PARA MOSTRAR A CONFIG SOMENTO DA GI3
+iosxe_GigabitEthernet3 = iosxe_manager.get_config("running",filter_GigabitEthernet3)
+
+# PROCESSAR O RETORNO DE FORMA LEGIVEL
+from xml.dom import minidom
+
+iosxe_config_xml = minidom.parseString(iosxe_GigabitEthernet3.xml)
+
+
+# PRINTA A SAIDA
+print (iosxe_config_xml.toprettyxml(indent ='  '))
+
+
+
+
+#CONVERTENDO XML PARA DICIONARIO
+
+import xmltodict
+
+iosxe_gig3_dict = xmltodict.parse(iosxe_GigabitEthernet3.xml)
+
+
+#CRIAR INTERFACE
+create_loopback = """
+<config>
+    <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+        <interface>
+            <name> Loopback1024 </name>
+            <description> TEST DEV </description>
+            <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">
+                ianaift:softwareLoopback
+            </type>
+            <enabled>true</enabled>
+            <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+                <address>
+                    <ip>172.16.1.1</ip>
+                    <netmask>255.255.255.0 </netmask>
+                </address>
+            </ipv4>
+        </interface>
+    </interfaces>
+</config>
+"""
+iosxe_create_loopback = iosxe_manager.edit_config(target = 'running', config = create_loopback)
+
+#VERIFICAR SE FOI EXECUtADO
+iosxe_create_loopback.ok
