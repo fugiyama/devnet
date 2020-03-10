@@ -1,0 +1,17 @@
+---
+192.168.99.10:
+   hostname: 192.168.99.10
+   groups: 
+     - routers
+192.168.99.11:
+   hostname: 192.168.99.11
+   groups: 
+     - routers
+192.168.99.12:
+   hostname: 192.168.99.12
+   groups: 
+     - routers
+192.168.99.13:
+   hostname: 192.168.99.13
+   groups: 
+     - routers

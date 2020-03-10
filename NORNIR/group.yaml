@@ -1,0 +1,8 @@
+---
+routers:
+    username: cisco
+    password: cisco
+    nornir_ssh_port: 22
+    nornir_nos: "ios"
+    platform: "ios"
+
