@@ -11,4 +11,4 @@ try:
         for x in doc['people']:
             print('NAME: ' + x['FirstName'] +'\nEMAIL : '+ x['Email'])
 except (TypeError) as e:
-    print ("CHAVA NAO É PEOPLE")
+    print ("KEY IS NOT EQUAL PEOPLE")
