@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<People>
+    <Person id='1'>
+        <FirstName>Benjamin</FirstName>
+        <LastName>Finkel</LastName>
+        <Email>ben.finkel@test.vom</Email>
+    </Person>
+    <Person id='2'>
+        <FirstName>Jane</FirstName>
+        <LastName>Doe</LastName>
+        <Email>janee.doe@test.vom</Email>
+    </Person>
+
+    <Person id='3'>
+        <FirstName>Pat</FirstName>
+        <LastName>Smith</LastName>
+        <Email>pat.smith@test.vom</Email>
+    </Person>
+</People>
