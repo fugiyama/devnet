@@ -143,7 +143,7 @@ for ip in iplist:
                         f.writelines(device_ip + ','  + acl_entry + ','+ 'permit ip any any\n')
                         
             for x in ports_entry:
-                if (str(x) in permited_ports) or  (str(x) in protocols_tcp):
+                if (str(x) in permited_ports) or  (str(x) in protocols_tcp:
                     #print("WARNING ACL {}  PORT {} IS ALLOWED".format(acl_entry,x))
                     with open ('WARNINGS.csv','a') as f:
                         f.writelines(device_ip + ',' + acl_entry + ',' + str(x) + '\n')

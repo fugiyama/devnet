@@ -1,7 +1,5 @@
 Workink host file example
 
-
-
 ---
 R1LAB:
    hostname: 10.122.64.251
