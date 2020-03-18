@@ -1,0 +1,28 @@
+---
+- name: Default config
+  hosts: all
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: Loopback config
+      ios_config:
+        authorize: yes
+        parents: interface loopback1000
+        lines:
+          - description TEST    
+    - name: basic config 
+      ios_config:
+        authorize: yes       
+        parents: 
+          - archive
+          - log config
+        lines:
+          - logging enable
+          - notify syslog contenttype plaintext
+          - hidekeys
+        after:
+          - do write
+
+      register: print_output
+    - debug: var=print_output

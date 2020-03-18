@@ -7,7 +7,7 @@ def fetch_and_parse_cdp_neighbors(task):
     url = f"https://{{task.host.hostname}}/restconf/data/Cisco-IOS-XE-cdp-oper:cdp-neighbor-details"
     
     headers = {"Accept": "application/yang-data+json"}
-
+    
     response = requests.get(url, headers=headers,auth=(task.host.username, task.host.password), verify = False)
 
     data = response.json()["Cisco-IOS-XE-cdp-oper:cdp-neighbor-details"]
